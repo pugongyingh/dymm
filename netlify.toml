@@ -1,14 +1,3 @@
 [build]
   functions = "dist/lambda"
   command = "yarn build"
-  
-[[headers]]
-  for = "*"
-  [headers.values]
-     Allow = "POST"
-    'Access-Control-Allow-Origin' = "*"
-    'Access-Control-Allow-Headers' = "*"  
-[context.production.environment]
-  TOML_ENV_VAR = "From netlify.toml"
-  REACT_APP_TOML_ENV_VAR = "From netlify.toml (REACT_APP_)"
-  REACT_APP_TOML_ENV = "From netlify.t"
